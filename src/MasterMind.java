@@ -58,8 +58,6 @@ public class MasterMind {
 			MasterMindPanelSet.add(Panel);
 			
 			panelcontainer.add(Panel);
-			
-			Frame.setVisible(true);
 		}
 		
 		scrollpane = new JScrollPane(panelcontainer);
@@ -69,7 +67,7 @@ public class MasterMind {
 		Frame.add(scrollpane);
 		
 		Frame.setVisible(true);
-		
+
 		Frame.addComponentListener(new ComponentListener() {
 
 			@Override

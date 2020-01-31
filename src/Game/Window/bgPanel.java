@@ -15,12 +15,11 @@ import javax.swing.JPanel;
 public class bgPanel extends JPanel {
 	private Image backgroundImage[] = new Image[3];
 	private Image backgroundImagee;
-	private JPanel HintergrundPanel = new JPanel();
 
 	public bgPanel(int i) {
 		// ii = i;
 		if (i == 0) {
-			HintergrundPanel.setBackground(Color.lightGray);
+			this.setBackground(Color.lightGray);
 		}
 
 		if (i == 1) {
@@ -53,16 +52,14 @@ public class bgPanel extends JPanel {
 
 	@Override
 	public void paintComponent(Graphics g) {
-		super.paintComponents(g);
 
+		super.paintComponents(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
 //		g.drawImage(backgroundImage, 0, 0, null);
 		g.drawImage(backgroundImagee, 0, 0, getWidth(), getHeight(), null);
+		
 	}
 
-	public JPanel getHintergrundPanel() {
-		return HintergrundPanel;
-	}
 }

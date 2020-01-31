@@ -58,32 +58,25 @@ public class Window extends JFrame implements ActionListener {
 	private void setmastermindpanelsize() {
 		int mastermindpanelwidth = this.getWidth() - 40;
 		int mastermindpanelheight = (int) Math.round(mastermindpanelwidth/4.5);
-		
 		mastermindpanelsize = new Dimension(mastermindpanelwidth, mastermindpanelheight);
 	}
+
 	public void NächsterZug() {
 		resetMain();
 		MasterMindPanel panel = new MasterMindPanel(this, mastermindpanelsize);
 		MasterMindPanelSet.add(panel);
 		panelcontainer.add(panel);
-		
-		setContentPane(hintergrund);
-		panel.resizePanel(mastermindpanelsize);
 		setVisible(true);
 	}
 
 	public Window() {
 		super("MasterMind");
-		setmastermindpanelsize();
 		eingabe();
-		
 	}
 
 	private void windoww() {
-		hintergrund = setHintergrund(0);
-		setContentPane(hintergrund);
-		panelcontainer.setLayout(new GridLayout(12, 1));
-		
+		hintergrund = getHintergrundPanel(0);
+		//setContentPane(hintergrund);
 		Dimension  screen = Toolkit.getDefaultToolkit().getScreenSize();
 		
 		double verhaeltnis = (double) 1200/450;
@@ -93,7 +86,11 @@ public class Window extends JFrame implements ActionListener {
 		
 		//minimale Window-Größe
 		this.setMinimumSize(new Dimension((int)(screen.getWidth()/8), (int)((screen.getHeight()/8)*verhaeltnis)));
+
+		setmastermindpanelsize();
 		
+		panelcontainer.setLayout(new GridLayout(12, 1));
+		panelcontainer.setPreferredSize(new Dimension(getWidth(), (int)mastermindpanelsize.getHeight()*12));
 		
 		
 		MasterMindPanel spielzug = new MasterMindPanel(this, mastermindpanelsize);
@@ -110,21 +107,16 @@ public class Window extends JFrame implements ActionListener {
 		
 		scrollpane = new JScrollPane(panelcontainer);
 		scrollpane.getVerticalScrollBar().setUnitIncrement(20);		//Scroll Speed
-		
 		scrollpane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);	//Keine Horizontale Scrollbar
-		this.add(scrollpane);
-		
+		this.getContentPane().add(scrollpane);
 		
 		
 		this.addComponentListener(new ComponentListener() {
 
 			@Override
 			public void componentResized(ComponentEvent e) {
-
-				int mastermindpanelwidth = getWidth() - 40;
-				int mastermindpanelheight = (int) Math.round(mastermindpanelwidth/4.5);
 				
-				Dimension mastermindpanelsize = new Dimension(mastermindpanelwidth, mastermindpanelheight);
+				setmastermindpanelsize();
 
 				Iterator<MasterMindPanel> i = MasterMindPanelSet.iterator();
 				
@@ -134,7 +126,7 @@ public class Window extends JFrame implements ActionListener {
 					p.resizePanel(mastermindpanelsize);
 				}
 				
-				panelcontainer.setPreferredSize(new Dimension(getWidth() -40, (int)mastermindpanelheight*12));
+				panelcontainer.setPreferredSize(new Dimension(getWidth()-80, (int)mastermindpanelsize.getHeight()*12));
 			}
 			
 			@Override
@@ -240,9 +232,9 @@ public class Window extends JFrame implements ActionListener {
 		return mmaincode;
 	}
 
-	public JPanel setHintergrund(int i) {
+	public JPanel getHintergrundPanel(int i) {
 		if (i == 0) {
-			hintergrund = new bgPanel(0).getHintergrundPanel();
+			hintergrund = new bgPanel(0);
 		} else {
 			hintergrund = new bgPanel(i);
 		}
@@ -345,27 +337,27 @@ public class Window extends JFrame implements ActionListener {
 			new Window();
 		}
 		if (Quelle == background0) {
-			hintergrund = setHintergrund(0);
+			hintergrund = getHintergrundPanel(0);
 			setContentPane(hintergrund);
 			add(panelcontainer);
 			setVisible(true);
 		}
 		if (Quelle == background1) {
-			hintergrund = setHintergrund(1);
+			hintergrund = getHintergrundPanel(1);
 			setContentPane(hintergrund);
 			add(panelcontainer);
 			setVisible(true);
 
 		}
 		if (Quelle == background2) {
-			hintergrund = setHintergrund(2);
+			hintergrund = getHintergrundPanel(2);
 			setContentPane(hintergrund);
 			add(panelcontainer);
 			setVisible(true);
 
 		}
 		if (Quelle == background3) {
-			hintergrund = setHintergrund(3);
+			hintergrund = getHintergrundPanel(3);
 			setContentPane(hintergrund);
 			add(panelcontainer);
 			setVisible(true);
