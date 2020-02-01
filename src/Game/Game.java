@@ -1,4 +1,4 @@
-package Game;
+﻿package Game;
 
 import Game.Window.Window;
 

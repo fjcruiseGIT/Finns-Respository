@@ -1,4 +1,4 @@
-package Game.Sound;
+﻿package Game.Sound;
 
 import java.io.InputStream;
 import java.net.URL;

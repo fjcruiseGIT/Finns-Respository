@@ -1,4 +1,4 @@
-package Game;
+﻿package Game;
 
 import java.awt.Color;
 import java.util.Random;

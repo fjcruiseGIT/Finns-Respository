@@ -1,4 +1,4 @@
-import java.awt.Color;
+ï»¿import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
@@ -39,7 +39,7 @@ public class MasterMindPanel extends JPanel {
 		//Height: 100
 
 		
-	    //SCHWARZ, WEIß, GRAU BUTTONS 1-4
+	    //SCHWARZ, WEIÃŸ, GRAU BUTTONS 1-4
 	    ckeins = new JLabel();
 	    ckeins.setOpaque(true);
 	    ckeins.setBackground(Color.white);
@@ -91,7 +91,7 @@ public class MasterMindPanel extends JPanel {
 	    this.add(bvier);
 	    
 	    
-	    //BESTÄTIGEN BUTTON
+	    //BESTÃ„TIGEN BUTTON
 	    bestaetigen = new JButton();
 	    bestaetigen.setOpaque(true);
 	    bestaetigen.setBackground(Color.ORANGE);

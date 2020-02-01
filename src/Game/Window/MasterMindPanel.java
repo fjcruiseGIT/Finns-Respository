@@ -1,4 +1,4 @@
-package Game.Window;
+ï»¿package Game.Window;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -52,7 +52,7 @@ public class MasterMindPanel extends JPanel implements ActionListener {
 
 		this.setOpaque(false);
 
-		// SCHWARZ, WEIß, GRAU BUTTONS 1-4
+		// SCHWARZ, WEIÃŸ, GRAU BUTTONS 1-4
 		ckeins = new JLabel("");
 		ckeins.setOpaque(true);
 		ckeins.setBackground(Color.gray);
@@ -81,7 +81,7 @@ public class MasterMindPanel extends JPanel implements ActionListener {
 		// FARB BUTTONS 1-4
 		beins = new JButton("");
 		beins.setOpaque(true);
-		beins.setBounds((int)(mastermindpanelsize.getWidth()/3), (int)(mastermindpanelsize.getWidth()/45), (int)(mastermindpanelsize.getWidth()/9), (int)(mastermindpanelsize.getWidth()/9));
+		beins.setBounds((int)(mastermindpanelsize.getWidth()/3.5), (int)(mastermindpanelsize.getWidth()/45), (int)(mastermindpanelsize.getWidth()/9), (int)(mastermindpanelsize.getWidth()/9));
 		beins.setBackground(Color.white);
 		this.add(beins);
 		beins.addActionListener(this);
@@ -107,7 +107,7 @@ public class MasterMindPanel extends JPanel implements ActionListener {
 		this.add(bvier);
 		bvier.addActionListener(this);
 
-		// BESTÄTIGEN BUTTON
+		// BESTÃ„TIGEN BUTTON
 		eingabe = new JButton("Spielzug beenden");
 		eingabe.setOpaque(true);
 		eingabe.setBackground(new Color(13, 255, 148));
@@ -156,7 +156,7 @@ public class MasterMindPanel extends JPanel implements ActionListener {
 				beenden();
 			}
 			else {
-				parent.NächsterZug();
+				parent.NÃ¤chsterZug();
 			}
 		}
 	}
@@ -167,7 +167,7 @@ public class MasterMindPanel extends JPanel implements ActionListener {
 		sound.stopAll();
 		sound.playj();
 		Object[] options = { "Neues Spiel", "Verlassen" };
-		int n = JOptionPane.showOptionDialog(null, "Herzlichen Glückwunsch! Das Rätsel wurde gelöst", "Gewonnen", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[1]);
+		int n = JOptionPane.showOptionDialog(null, "Herzlichen GlÃ¼ckwunsch! Das RÃ¤tsel wurde gelÃ¶st", "Gewonnen", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[1]);
 		if (n == 0) {
 			parent.dispose();
 			parent = new Window();

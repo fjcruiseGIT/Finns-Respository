@@ -1,4 +1,4 @@
-import java.awt.Dimension;
+ï»¿import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ComponentEvent;
@@ -33,10 +33,10 @@ public class MasterMind {
 		
 		double verhaeltnis = (double) 1200/450;
 		
-		//initiale Window-Größe
+		//initiale Window-GrÃ¶ÃŸe
 		Frame.setSize((int)(screen.getWidth()/2), (int)((screen.getHeight()/2)));
 		
-		//minimale Window-Größe
+		//minimale Window-GrÃ¶ÃŸe
 		Frame.setMinimumSize(new Dimension((int)(screen.getWidth()/8), (int)((screen.getHeight()/8)*verhaeltnis)));
 		
 

@@ -1,4 +1,4 @@
-package Game.Window;
+Ôªøpackage Game.Window;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -61,7 +61,7 @@ public class Window extends JFrame implements ActionListener {
 		mastermindpanelsize = new Dimension(mastermindpanelwidth, mastermindpanelheight);
 	}
 
-	public void N‰chsterZug() {
+	public void N√§chsterZug() {
 		resetMain();
 		MasterMindPanel panel = new MasterMindPanel(this, mastermindpanelsize);
 		MasterMindPanelSet.add(panel);
@@ -81,10 +81,10 @@ public class Window extends JFrame implements ActionListener {
 		
 		double verhaeltnis = (double) 1200/450;
 		
-		//initiale Window-Grˆﬂe
+		//initiale Window-Gr√∂√üe
 		this.setSize((int)(screen.getWidth()/2), (int)((screen.getHeight()/2)));
 		
-		//minimale Window-Grˆﬂe
+		//minimale Window-Gr√∂√üe
 		this.setMinimumSize(new Dimension((int)(screen.getWidth()/8), (int)((screen.getHeight()/8)*verhaeltnis)));
 
 		setmastermindpanelsize();
@@ -203,7 +203,7 @@ public class Window extends JFrame implements ActionListener {
 		eingabeFrame.add(panel);
 
 		Object[] options = { "Eingene Eingabe", "Computergeneriert" };
-		int n = JOptionPane.showOptionDialog(null, "Herzlich willkommen, bitte w‰hle eine Eingabemethode", "Starten", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[1]);
+		int n = JOptionPane.showOptionDialog(null, "Herzlich willkommen, bitte w√§hle eine Eingabemethode", "Starten", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[1]);
 		if (n == 0) {
 			eingabeFrame.setVisible(true);
 		} else {
@@ -251,12 +251,12 @@ public class Window extends JFrame implements ActionListener {
 
 			@Override
 			public void windowDeactivated(WindowEvent e) {
-				// hier werden wir sp‰ter unser Spiel pausieren
+				// hier werden wir sp√§ter unser Spiel pausieren
 			}
 
 			@Override
 			public void windowActivated(WindowEvent e) {
-				// hier werden wir sp‰ter unser Spiel wieder fortsetzen
+				// hier werden wir sp√§ter unser Spiel wieder fortsetzen
 			}
 		});
 	}
@@ -294,7 +294,7 @@ public class Window extends JFrame implements ActionListener {
 	}
 
 	private void addPreferencsMenuItems(JMenu prefMenu) {
-		JMenu bg = new JMenu("Hintergr¸nde");
+		JMenu bg = new JMenu("Hintergr√ºnde");
 		background0 = new JMenuItem("Hintergund grau");
 		background1 = new JMenuItem("Spielsteinhintergrund");
 		background2 = new JMenuItem("Hintergrund Lavafall");
@@ -408,7 +408,7 @@ public class Window extends JFrame implements ActionListener {
 		}
 	}
 
-	public void schlieﬂen(int i) {
+	public void schlie√üen(int i) {
 		// TODO Auto-generated method stub
 		System.out.println(i);
 		panelcontainer.removeAll();
