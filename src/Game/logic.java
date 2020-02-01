@@ -3,15 +3,11 @@
 import java.awt.Color;
 import java.util.Random;
 
-import Game.Window.Window;
-
 public class logic {
 	private Color[] mainCode = new Color[4];
 	private Color[] smainCode = mainCode;
 	private Color[] compCode = new Color[4];
 	private int[] hint = { 0, 0, 0, 0 };
-	private Window window;
-	private boolean gewonnen;
 	private Color[] Colors = { Color.white, Color.red, Color.orange, Color.green, Color.blue, Color.magenta };
 
 	public logic(Color[] compColors, Color[] mainCode) {
@@ -63,7 +59,6 @@ public class logic {
 			}
 		}
 		if (gewonnen == 4) {
-			this.gewonnen = true;
 			intg = 1;
 		}
 		return intg;

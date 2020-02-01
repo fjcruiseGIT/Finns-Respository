@@ -2,7 +2,6 @@
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -28,6 +27,10 @@ import Game.Sound.Sound;
 
 public class Window extends JFrame implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3146970825232948807L;
 	private JMenuItem quitItem;
 	private JMenuItem newGame;
 	private JMenuItem background0;

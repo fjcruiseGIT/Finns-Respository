@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -163,7 +162,6 @@ public class MasterMindPanel extends JPanel implements ActionListener {
 
 	private void beenden() {
 		// TODO Auto-generated method stub
-		JDialog gewonnen = new JDialog();
 		sound.stopAll();
 		sound.playj();
 		Object[] options = { "Neues Spiel", "Verlassen" };

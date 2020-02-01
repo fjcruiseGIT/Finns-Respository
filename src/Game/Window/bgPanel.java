@@ -5,14 +5,16 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.RenderingHints;
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class bgPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3471612593169591827L;
 	private Image backgroundImage[] = new Image[3];
 	private Image backgroundImagee;
 

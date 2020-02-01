@@ -1,8 +1,5 @@
 ﻿package Game.Sound;
 
-import java.io.InputStream;
-import java.net.URL;
-
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
